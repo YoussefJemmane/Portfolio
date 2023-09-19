@@ -15,7 +15,7 @@
     "@vercel/analytics": "^1.0.1",
     "eslint": "^7.32.0",
     "framer-motion": "^10.8.3",
-    "next": "13.2.3",
+    "next": "13.4.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
