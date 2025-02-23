@@ -21,9 +21,11 @@ import TailwindCSSIcon from "@/app/assets/skills/tailwindcss.svg";
 import LivewireIcon from "@/app/assets/skills/livewire.svg";
 import UMLIcon from "@/app/assets/skills/uml.svg";
 
+import { useLanguage } from "../context/LanguageContext";
 import SkillIcon from "../components/SkillIcon";
 
 const Skills = () => {
+  const { t } = useLanguage();
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef(null);
   const controls = useAnimation();
@@ -68,15 +70,15 @@ const Skills = () => {
   }, [isDragging, controls]);
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-8 text-center text-[#D84747]"
+          className="text-3xl font-bold mb-8 text-center text-[#386FA4] dark:text-[#60A5FA] transition-colors duration-200"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Skills
+          {t("skills")}
         </motion.h2>
         <div
           className="overflow-hidden cursor-grab"
@@ -96,7 +98,7 @@ const Skills = () => {
             onDragEnd={() => setIsDragging(false)}
           >
             {skills.concat(skills).map((skill, index) => (
-              <SkillIcon key={index} Icon={skill.Icon} name={skill.name} />
+              <SkillIcon key={index} Icon={skill.Icon} />
             ))}
           </motion.div>
         </div>

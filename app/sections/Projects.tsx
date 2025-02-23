@@ -4,15 +4,18 @@ import project1  from "@/app/assets/project1.png"
 import project2  from "@/app/assets/project2.png"
 import project3  from "@/app/assets/project3.png"
 import ProjectCard from '../components/ProjectItem';
+import { useLanguage } from '../context/LanguageContext';
 
 
 const Projects = () => {
+  const { t } = useLanguage();
+
   const projectsData = [
     {
       image: project3,
-      projectName: "Afnane Photography",
+      projectName: t('projects.title1'),
       projectLink: "https://www.afnanephotography.com/",
-      projectDescription: "A static website for Afnane Photography, a photography studio specializing in personalized and unique photo sessions.",
+      projectDescription: t('projects.description1'),
       projectTech: ["Next.js", "TailwindCSS"],
       projectExternalLinks: {
         github: "https://github.com/YoussefJemmane/AfnanePhotography",
@@ -20,9 +23,9 @@ const Projects = () => {
     },
     {
       image: project1,
-      projectName: "CV Builder App",
+      projectName: t('projects.title2'),
       projectLink: "",
-      projectDescription: "A user-friendly web application that simplifies and enhances the resume creation process.",
+      projectDescription: t('projects.description2'),
       projectTech: ["React", "Express", "MongoDB", "Node.js", "Tailwind", "DaisyUI", "Alpine.js", "Puppeteer"],
       projectExternalLinks: {
         github: "https://github.com/YoussefJemmane/CV_Builder",
@@ -31,9 +34,9 @@ const Projects = () => {
     },
     {
       image: project2,
-      projectName: "Rent Cars App",
+      projectName: t('projects.title3'),
       projectLink: "",
-      projectDescription: "A user-friendly web application that allows you to rent a car and manage your reservations there is also an admin panel to manage the cars and reservations.",
+      projectDescription: t('projects.description3'),
       projectTech: ["Laravel", "Breeze", "Tailwind"],
       projectExternalLinks: {
         github: "https://github.com/YoussefJemmane/Location_voiture",
@@ -43,15 +46,15 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-8 text-center text-[#D84747]"
+          className="text-3xl font-bold mb-8 text-center text-[#386FA4] dark:text-[#60A5FA] transition-colors duration-200"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Projects
+          {t('projects')}
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (

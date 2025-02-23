@@ -33,10 +33,16 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
+          className="bg-white dark:bg-gray-900 text-black dark:text-gray-100 transition-colors duration-200"
         >
-          <AnimatedSection>
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="sticky top-0 z-50 bg-white dark:bg-gray-900"
+          >
             <Header />
-          </AnimatedSection>
+          </motion.div>
           <AnimatedSection>
             <Experience />
           </AnimatedSection>
