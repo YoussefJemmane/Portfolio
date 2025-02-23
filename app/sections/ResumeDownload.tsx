@@ -1,10 +1,7 @@
 import React from "react";
 import { Download } from "lucide-react";
-<<<<<<< HEAD
 import { useLanguage } from "../context/LanguageContext";
 
-=======
->>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
 const ResumeDownload = () => {
   const { t, language } = useLanguage(); 
   console.log(language);

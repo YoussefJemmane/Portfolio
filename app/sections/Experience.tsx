@@ -1,10 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import ExperienceItem from "../components/ExperienceItem";
-<<<<<<< HEAD
 import { useLanguage } from "../context/LanguageContext";
-=======
->>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
 
 const Experience = () => {
   const { t } = useLanguage();
@@ -16,11 +13,7 @@ const Experience = () => {
       date: t('experience.date1'),
       location: t('experience.location1'),
       description: [
-<<<<<<< HEAD
         t('experience.description1'),
-=======
-        "Developed from scratch a laboratories budget management app.",
->>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
       ],
     },
     {
@@ -29,13 +22,8 @@ const Experience = () => {
       date: t('experience.date2'),
       location: t('experience.location2'),
       description: [
-<<<<<<< HEAD
         t('experience.description2.1'),
         t('experience.description2.2'),
-=======
-        "Developed a dynamic calendar component that allows users to select dates and stores them in a table.",
-        "Created the FeverTokens Package-Oriented Transpiler Demo, converting smart contracts into packages.",
->>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
       ],
     },
     {
@@ -44,11 +32,7 @@ const Experience = () => {
       date: t('experience.date3'),
       location: t('experience.location3'),
       description: [
-<<<<<<< HEAD
         t('experience.description3'),
-=======
-        "Built a responsive full stack web application for managing ships, workers and reporting issues.",
->>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
       ],
     },
   ];

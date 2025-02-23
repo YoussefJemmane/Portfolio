@@ -1,8 +1,4 @@
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-
-=======
->>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
 export interface EducationItemProps {
   degree: string;
   institution: string;
@@ -10,10 +6,6 @@ export interface EducationItemProps {
   location: string;
   details?: string[];
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
 const EducationItem: React.FC<EducationItemProps> = ({
   degree,
   institution,
