@@ -2,12 +2,18 @@ import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
 export interface ProjectExternalLinks {
   github?: string;
   externalLink?: string;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
 export interface Project {
   image: StaticImageData;
   projectName: string;
@@ -16,12 +22,18 @@ export interface Project {
   projectTech: string[];
   projectExternalLinks: ProjectExternalLinks;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
 interface ProjectCardProps {
   project: Project;
   index: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 166d5ab49765598b8a795aee6fd3b191641a98b2
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => (
   <motion.div
     className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden cursor-pointer"
