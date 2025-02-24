@@ -10,8 +10,7 @@ import Skills from "./sections/Skills";
 import Education from "./sections/Education";
 import AnimatedSection from "./components/AnimatedSection";
 import ResumeDownload from "./sections/ResumeDownload";
-import LanguageSwitcher from "./components/LanguageSwitcher";
-import ThemeSwitcher from "./components/ThemeSwitcher";
+
 import SettingsSection from "./sections/Switchers";
 
 export default function Home() {
