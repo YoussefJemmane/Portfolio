@@ -5,8 +5,6 @@ import ContactItem from "../components/ContactItem";
 import photo from "@/app/assets/p.jpg";
 import Image from "next/image";
 import { useLanguage } from "../context/LanguageContext";
-import LanguageSwitcher from "../components/LanguageSwitcher";
-import ThemeSwitcher from "../components/ThemeSwitcher";
 
 const Header = () => {
   const { t } = useLanguage();
