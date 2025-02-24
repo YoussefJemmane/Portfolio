@@ -10,6 +10,9 @@ import Skills from "./sections/Skills";
 import Education from "./sections/Education";
 import AnimatedSection from "./components/AnimatedSection";
 import ResumeDownload from "./sections/ResumeDownload";
+import LanguageSwitcher from "./components/LanguageSwitcher";
+import ThemeSwitcher from "./components/ThemeSwitcher";
+import SettingsSection from "./sections/Switchers";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -43,6 +46,7 @@ export default function Home() {
           >
             <Header />
           </motion.div>
+          <SettingsSection />
           <AnimatedSection>
             <Experience />
           </AnimatedSection>
@@ -58,6 +62,7 @@ export default function Home() {
           <AnimatedSection>
             <ResumeDownload />
           </AnimatedSection>
+         
         </motion.div>
       )}
     </AnimatePresence>

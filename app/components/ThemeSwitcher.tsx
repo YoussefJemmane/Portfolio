@@ -24,42 +24,29 @@ export default function ThemeSwitcher() {
 
   return (
     <div
+      className="relative flex items-center"
       ref={dropdownRef}
-      className="absolute top-2 right-16 flex items-center"
     >
       <div
-        className="flex items-center cursor-pointer"
+        className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 cursor-pointer transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {theme === "light" && (
-          <Sun
-            size={20}
-            className="text-[#386FA4] hover:text-[#2f5981] transition-colors"
-          />
-        )}
-        {theme === "dark" && (
-          <Moon
-            size={20}
-            className="text-[#386FA4] hover:text-[#2f5981] transition-colors"
-          />
-        )}
-        {theme === "system" && (
-          <Monitor
-            size={20}
-            className="text-[#386FA4] hover:text-[#2f5981] transition-colors"
-          />
-        )}
+        {theme === "light" && <Sun size={20} className="text-[#386FA4]" />}
+        {theme === "dark" && <Moon size={20} className="text-[#386FA4]" />}
+        {theme === "system" && <Monitor size={20} className="text-[#386FA4]" />}
       </div>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-1 min-w-[120px] z-50">
+        <div className="absolute top-full right-0 mt-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-lg py-1 min-w-[120px] z-50">
           <button
             onClick={() => {
               setTheme("light");
               setIsOpen(false);
             }}
-            className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
-              theme === "light" ? "text-[#386FA4] font-medium" : "text-gray-700 dark:text-gray-300"
+            className={`w-full px-4 py-2 text-left text-sm rounded-md transition-colors ${
+              theme === "light"
+                ? "bg-gray-200 dark:bg-gray-700 font-medium"
+                : "hover:bg-gray-100 dark:hover:bg-gray-700"
             }`}
           >
             <span className="flex items-center gap-2">
@@ -72,8 +59,10 @@ export default function ThemeSwitcher() {
               setTheme("dark");
               setIsOpen(false);
             }}
-            className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
-              theme === "dark" ? "text-[#60A5FA] font-medium" : "text-gray-700 dark:text-gray-300"
+            className={`w-full px-4 py-2 text-left text-sm rounded-md transition-colors ${
+              theme === "dark"
+                ? "bg-gray-200 dark:bg-gray-700 font-medium"
+                : "hover:bg-gray-100 dark:hover:bg-gray-700"
             }`}
           >
             <span className="flex items-center gap-2">
@@ -86,8 +75,10 @@ export default function ThemeSwitcher() {
               setTheme("system");
               setIsOpen(false);
             }}
-            className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
-              theme === "system" ? "text-[#386FA4] font-medium" : "text-gray-700 dark:text-gray-300"
+            className={`w-full px-4 py-2 text-left text-sm rounded-md transition-colors ${
+              theme === "system"
+                ? "bg-gray-200 dark:bg-gray-700 font-medium"
+                : "hover:bg-gray-100 dark:hover:bg-gray-700"
             }`}
           >
             <span className="flex items-center gap-2">

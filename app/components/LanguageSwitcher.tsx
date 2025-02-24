@@ -10,7 +10,10 @@ export default function LanguageSwitcher() {
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     }
@@ -20,21 +23,16 @@ export default function LanguageSwitcher() {
   }, []);
 
   return (
-    <div
-      ref={dropdownRef}
-      className="absolute top-4 right-4 flex items-center"
-    >
+    <div className="relative flex items-center" ref={dropdownRef}>
       <div
-        className="flex items-center cursor-pointer"
+        className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-900 cursor-pointer transition-colors"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <Languages size={20} className="text-[#386FA4] hover:text-[#2f5981] transition-colors" />
+        <Languages size={20} className="text-[#386FA4]" />
       </div>
 
       {isOpen && (
-        <div
-          className="absolute top-full right-0 mt-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg py-1 min-w-[120px] z-50"
-        >
+        <div className="absolute top-full right-0 mt-2 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl shadow-lg py-1 min-w-[120px] z-50">
           {locales.map((lang) => (
             <button
               key={lang}
@@ -42,8 +40,10 @@ export default function LanguageSwitcher() {
                 setLocale(lang);
                 setIsOpen(false);
               }}
-              className={`w-full px-4 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
-                locale === lang ? 'text-[#386FA4] font-medium' : 'text-gray-700 dark:text-gray-300'
+              className={`w-full px-4 py-2 text-left text-sm rounded-md transition-colors ${
+                locale === lang
+                  ? "bg-gray-200 dark:bg-gray-700 font-medium"
+                  : "hover:bg-gray-100 dark:hover:bg-gray-700"
               }`}
             >
               {lang === "en" ? "🇬🇧 English" : "🇫🇷 Français"}
